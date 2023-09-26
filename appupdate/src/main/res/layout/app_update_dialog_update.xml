@@ -9,40 +9,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="460dp"
-        android:paddingBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/dialog_bg_type_9"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="20dp">
 
         <TextView
-            android:text="本次更新如下："
-            android:textSize="18sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="180dp"
-            android:textColor="#272727"
-            android:layout_marginBottom="10dp"
+            android:id="@+id/tv_version_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="110dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            tools:text="2.0.0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="本次更新如下："
+            android:textColor="#272727"
+            android:textSize="18sp" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_weight="1"
             android:overScrollMode="never">
 
             <TextView
-                tools:text="哈啊哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈哈"
                 android:id="@+id/tv_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingMultiplier="1.2"
                 android:textColor="#272727"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:text="哈啊哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈哈" />
         </androidx.core.widget.NestedScrollView>
 
         <com.alguojian.appupdate.view.NumberProgressBar
@@ -72,8 +83,8 @@
         android:id="@+id/line"
         android:layout_width="2dp"
         android:layout_height="30dp"
-        android:layout_marginTop="-26dp"
         android:layout_gravity="center"
+        android:layout_marginTop="-26dp"
         android:background="@android:color/white" />
 
     <ImageButton

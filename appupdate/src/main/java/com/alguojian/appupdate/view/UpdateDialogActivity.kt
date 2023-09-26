@@ -81,6 +81,9 @@ class UpdateDialogActivity : AppCompatActivity(), View.OnClickListener {
         if (manager.dialogButtonTextColor != -1) {
             btnUpdate.setTextColor(manager.dialogButtonTextColor)
         }
+        if (manager.apkVersionName.isNotEmpty()) {
+            findViewById<TextView>(R.id.tv_version_name).text = manager.apkVersionName
+        }
         if (manager.dialogProgressBarColor != -1) {
             progressBar.reachedBarColor = manager.dialogProgressBarColor
             progressBar.setProgressTextColor(manager.dialogProgressBarColor)
@@ -119,6 +122,7 @@ class UpdateDialogActivity : AppCompatActivity(), View.OnClickListener {
                 }
                 manager?.onButtonClickListener?.onButtonClick(OnButtonClickListener.CANCEL)
             }
+
             R.id.btn_update -> {
                 if (btnUpdate.tag == install) {
                     ApkUtil.installApk(this, Constant.AUTHORITIES!!, apk)

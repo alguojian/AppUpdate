@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, OnButtonClickLis
             smallIcon(R.mipmap.ic_launcher)
             showNewerToast(true)
             apkVersionCode(2)
+            apkVersionName("1.0.0")
             apkDescription(getString(R.string.dialog_msg))
             jumpInstallPage(true)
             showNotification(true)

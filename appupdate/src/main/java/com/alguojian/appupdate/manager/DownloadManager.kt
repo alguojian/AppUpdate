@@ -45,6 +45,7 @@ class DownloadManager private constructor(builder: Builder) : Serializable {
     internal var downloadPath: String
     internal var smallIcon: Int
     internal var apkDescription: String
+    internal var apkVersionName: String
     internal var apkMD5: String
     internal var httpManager: BaseHttpDownloadManager?
     internal var notificationChannel: NotificationChannel?
@@ -72,6 +73,7 @@ class DownloadManager private constructor(builder: Builder) : Serializable {
         smallIcon = builder.smallIcon
         apkDescription = builder.apkDescription
         apkMD5 = builder.apkMD5
+        apkVersionName = builder.apkVersionName
         httpManager = builder.httpManager
         notificationChannel = builder.notificationChannel
         onDownloadListeners = builder.onDownloadListeners
@@ -316,6 +318,10 @@ class DownloadManager private constructor(builder: Builder) : Serializable {
 
         fun apkVersionCode(apkVersionCode: Int): Builder {
             this.apkVersionCode = apkVersionCode
+            return this
+        }
+        fun apkVersionName(apkVersionName: String): Builder {
+            this.apkVersionName = apkVersionName
             return this
         }
 
